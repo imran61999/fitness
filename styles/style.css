@@ -194,6 +194,9 @@ header {
 }
 
 /* BMI section */
+.calculate-description{
+    text-align: center;
+}
 table {
     border-collapse: collapse;
 }
