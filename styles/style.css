@@ -1,32 +1,35 @@
-body{
+body {
     background-color: black;
     margin-top: 10px;
 }
-.margin{
+
+.margin {
     margin-left: 150px;
     margin-right: 150px;
 
 }
 
-header{
+header {
     background-color: #191919;
     padding-left: 150px;
     padding-right: 150px;
 }
+
 .display-flex {
     display: flex;
 }
 
-.nav-iteam{
+.nav-iteam {
     list-style: none;
     margin-right: 30px;
 }
 
-.nav-link{
+.nav-link {
     text-decoration: none;
     font-weight: 500;
 }
-.navbar{
+
+.navbar {
     justify-content: space-between;
     align-items: center;
 }
@@ -35,50 +38,173 @@ header{
     background-color: #777777;
     background-color: #111111;
 } */
-.title{
+.title {
     font-size: 2rem;
 }
-.text-color{
+
+.text-color {
     color: white;
 }
-.bannar-title{
+
+.bannar-title {
     font-size: 4rem;
     font-weight: bold;
 }
-.btn-primary{
+
+.banner-img {
+    position: relative;
+    display: inline-block;
+}
+
+.free {
+    background-color: #49413b;
+    border-radius: 10px;
+    line-height: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 350px;
+    left: 180px;
+}
+
+.tutorial {
+    background-color: #49413b;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    line-height: 0;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.btn-primary {
     background-color: #E6533C;
     border: none;
     border-radius: 50px;
     padding: 10px;
+    width: 160px;
 }
+
 /*  hero section*/
-.hero{
+.hero {
     justify-content: space-between;
 }
 
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        /* flex-direction: column;
+        align-items: center;
+        margin-top: 10px; */
+        display: none;
+    }
+
+    .nav-iteam {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header,
+    .margin {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-img img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .banner-img {
+        position: relative;
+        display: inline-block;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .btn-primary {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .bannar-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+
+
 /* habit sectioon */
-.habit-description{
+.habit-description {
     text-align: center;
 }
-.habit{
+
+.habit {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    
+
 }
-.border{
+
+.border {
     border-radius: 100px;
+}
+@media (max-width: 576px){
+    .habit{
+        flex-direction: column;
+    }
+}
+/* extra section */
+.extra-sec {
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #222222;
+    border-radius: 20px;
+}
+@media (max-width: 576px){
+    .extra-sec{
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        
+    }
+    .extra-sec img{
+        border-radius: 20px;
+    }
 }
 
 /* BMI section */
-table{
+table {
     border-collapse: collapse;
 }
-td , th{
+
+td,
+th {
     border: 1px solid white;
     padding: 5px;
 }
-.calculate{
+
+.calculate {
     justify-content: space-between;
     background-color: #222222;
     padding-left: 150px;
@@ -86,36 +212,73 @@ td , th{
     padding-bottom: 30px;
     margin-top: 40px;
 }
-.extra-sec{
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #222222;
-    border-radius: 20px;
+
+
+@media (max-width: 576px){
+    .calculate{
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .btn-primary{
+        width: 250px;
+    }
 }
 
 /* team section */
-.team{
+.team {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: rgb(230, 230, 230);
+    gap: 10px;
+    background-color: #1c1c1c;
     padding: 20px;
     border-radius: 20px;
 }
+.team-description{
+    text-align: center;
+}
+.team-img {
+    border-radius: 15px;
+}
+@media (max-width: 576px){
+    .team{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
 
 /* footer section */
-.foot{
+.foot {
     display: flex;
     justify-content: space-between;
-    
+
 }
-.foo-list{
-    text-decoration: none;
-}
-footer{
+
+
+footer {
     background-color: #191919;
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 50px;
     padding-bottom: 50px;
     margin-top: 50px;
+}
+@media (max-width: 576px){
+    .foo-list{
+        flex-direction: column;
+    }
+    footer{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+    .foot{
+        flex-direction: column;
+    }
 }
